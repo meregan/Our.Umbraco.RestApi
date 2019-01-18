@@ -1,4 +1,8 @@
-# Reboot of the UmbracoRestAPI
+# Our.Umbraco.RestAPI
+
+Add an API to your Umbraco website for headless scenarios without the need for Umbraco Cloud.
+
+## Reboot of the UmbracoRestAPI
 
 Original project is here [https://github.com/umbraco/UmbracoRestApi] (https://github.com/umbraco/UmbracoRestApi)
 
