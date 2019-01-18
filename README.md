@@ -57,71 +57,7 @@ A great way to browse Umbraco's REST service is to use the great html/javascript
 * /umbraco/rest/v1/members
 * /umbraco/rest/v1/relations
 
-
-# REST APIs in Umbraco
-
-_Information about REST APIs in Umbraco_
-
-## Creating your own
-
-It is entirely possible and quite easy to create your own REST APIs for Umbraco by utilizing ASP.Net's WebApi in conjunction with [Umbraco's UmbracoApiController's](../Controllers).
-
-## Using an existing REST API platform
-
-A free add-on for Umbraco 7.3+ has been built by the Umbraco HQ that gives you a nice REST API for working with content, media, members & relations.
-The source code for this project lives at GitHub: [https://github.com/umbraco/UmbracoRestApi](https://github.com/umbraco/UmbracoRestApi)
-
-It's Based on the [HAL specification](http://stateless.co/hal_specification.html) [(GitHub link)](https://github.com/mikekelly/hal_specification)
-and is using a wonderful WebApi implementation of HAL which can be found on GitHub: [https://github.com/JakeGinnivan/WebApi.Hal](https://github.com/JakeGinnivan/WebApi.Hal).
-
-### Installation
-
-Installation can be done via Nuget:
-
-	Install-Package UmbracoCms.RestApi
-
-This package will also install another add-on for Umbraco called [Identity Extensions](https://github.com/umbraco/UmbracoIdentityExtensions).
-
-Once installed, a readme is displayed with a snippet of code to enable the REST API. This can be done using OWIN startup classes and because the IdentityExtensions package has
-been installed, a few classes have been added to your ~/App_Startup folder. The easiest way to enable the REST API is to copy the code snippet from the readme that
-is displayed:
-
-
-	app.ConfigureUmbracoRestApi(new UmbracoRestApiOptions()
-	{
-		//Modify the CorsPolicy as required
-		CorsPolicy = new CorsPolicy()
-            {
-                AllowAnyHeader = true,
-                AllowAnyMethod = true,
-                AllowAnyOrigin = true
-            }
-	});
-
-then open the file: `~/App_Startup/UmbracoStandardOwinStartup.cs`
-
-and paste this snippet just underneath this line of code: `base.Configuration(app);`
-
-If you would like to have the Umbraco back office cookie used to authenticate the REST API
-you can add this line of code too:
-
-
-	app.UseUmbracoCookieAuthenticationForRestApi(ApplicationContext.Current);
-
-That's it, you've now enabled the REST API.
-
-### Discovery
-
-A great way to browse Umbraco's REST service is to use the great html/javascript [HAL Browser](https://github.com/mikekelly/hal-browser). The starting endpoints are:
-
-/umbraco/rest/v1/content
-/umbraco/rest/v1/media
-/umbraco/rest/v1/members
-/umbraco/rest/v1/relations
-
-We will be enabling a single root endpoint that list these HAL links in the very near future!
-
-### Security
+## Security
 
 Currently the REST API is secured based on back office user logins. In the future this will be enabled for front-end member logins and we'll allow for an easy
 approach for configuring the security during startup/configuration of the REST API.
