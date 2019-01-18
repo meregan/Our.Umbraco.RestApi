@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Umbraco.RestApi", "Umbraco.RestApi\Umbraco.RestApi.csproj", "{A5EE27E5-7825-4443-808F-C51DAD102D9E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Umbraco.RestApi.Tests", "Umbraco.RestApi.Tests\Umbraco.RestApi.Tests.csproj", "{B1AA5F6F-8D28-493D-8C9C-1A3CA24ACD14}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{50217DAB-3AC4-4F09-8846-0FC26C59A9C3}"
+	ProjectSection(SolutionItems) = preProject
+		..\build\Build-Release.ps1 = ..\build\Build-Release.ps1
+		..\build\Build.bat = ..\build\Build.bat
+		..\build\Readme.txt = ..\build\Readme.txt
+		..\build\UmbracoCms.RestApi.nuspec = ..\build\UmbracoCms.RestApi.nuspec
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CodeFiles", "CodeFiles", "{6F2DBA9B-37EC-4526-9057-0463C5CF32BB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A5EE27E5-7825-4443-808F-C51DAD102D9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5EE27E5-7825-4443-808F-C51DAD102D9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5EE27E5-7825-4443-808F-C51DAD102D9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5EE27E5-7825-4443-808F-C51DAD102D9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1AA5F6F-8D28-493D-8C9C-1A3CA24ACD14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1AA5F6F-8D28-493D-8C9C-1A3CA24ACD14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1AA5F6F-8D28-493D-8C9C-1A3CA24ACD14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1AA5F6F-8D28-493D-8C9C-1A3CA24ACD14}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
